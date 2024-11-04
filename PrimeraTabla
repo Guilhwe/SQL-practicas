@@ -1,5 +1,19 @@
 CREATE TABLE autor(idAutor NUMBER(5) PRIMARY KEY, nombre VARCHAR(50) NOT NULL, apellido VARCHAR(50), email VARCHAR(50) UNIQUE);
 CREATE TABLE Libro(idLibro NUMBER(5) PRIMARY KEY, titulo VARCHAR(100) NOT NULL, precio NUMBER(10,2), idAutor NUMBER(5), FOREIGN KEY(idAutor) REFERENCES Autor(idAutor));
+
+ALTER TABLE autor
+ADD fechaNacimiento DATE;
+
+ALTER TABLE autor
+MODIFY apellido VARCHAR(50) NOT NULL;
+
+ALTER TABLE autor
+DROP COLUMN fechaNacimiento;
+
+ALTER TABLE Libro
+ADD CONSTRAINT chk_precio
+CHECK (precio >=0);
+
 DROP TABLE autor;
 DROP TABLE libro;
 //Importante recordar que la tabla de libro depende de la de autor por ello tiene una ForeignKey que recurre al id del Autor

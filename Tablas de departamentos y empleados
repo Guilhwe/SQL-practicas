@@ -14,3 +14,12 @@ VALUES ('00001', 'Dirección', 'Planta20');
 
 INSERT INTO Departamentos(idDepartamento, nombre, ubicacion)
 VALUES ('00002', 'Gestión', 'Planta19');
+//se puede añadir valores sin especificar pero se han de añadir en el orden de creacion de la tabla
+INSERT INTO Empleados
+Values ('00001', 'Carlos', 'Ramirez', TO_DATE('1996-08-19', 'YYYY-MM-DD'),'00001',TO_DATE('2020-08-23', 'YYYY-MM-DD'));
+
+INSERT INTO Empleados
+Values ('00002', 'Raul', 'Lobato', TO_DATE('1990-07-17', 'YYYY-MM-DD'),'00002',TO_DATE('2023-08-26', 'YYYY-MM-DD'));
+
+INSERT INTO Empleados
+Values ('00003', 'Carmen', 'Gonzalez', TO_DATE('1989-01-11', 'YYYY-MM-DD'),'00002',TO_DATE('2022-05-03', 'YYYY-MM-DD'));

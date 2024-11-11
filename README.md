@@ -7,3 +7,5 @@ AGREGADO DE DATOS EN LA TABLA (DML)
 ![Captura3](https://github.com/user-attachments/assets/3797e1ae-68ec-4ba0-94f8-5ba8dde16cba)
 Añadido de empleados a la tabla correspondiente usando una foreign key de la tabla de Departamentos y metodo sin especificar las columnas.
 ![Captura4](https://github.com/user-attachments/assets/d2103b8d-58c2-4a42-92ff-7028aea1c732)
+Creacion de usuarios y rol de prueba con sus repesctivos permisos sobre x tablas
+![Captura5](https://github.com/user-attachments/assets/ec9139ed-67ae-49e4-a126-365dbec2d816)

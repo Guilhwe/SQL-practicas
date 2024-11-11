@@ -1,0 +1,14 @@
+//permite la creacion de usuarios
+ALTER SESSION SET "_ORACLE_SCRIPT" = true;
+//donde guardamos los usuarios 
+CREATE TABLESPACE tablespace_test DATAFILE'tablespace_test.dbf'SIZE 100M;
+//usuario de prueba
+CREATE USER willy IDENTIFIED BY ILERNA DEFAULT TABLESPACE tablespace_test;
+//modificar contraseña de x usuario
+ALTER USER willy IDENTIFIED BY ilerna;
+//otorgar permisos de x usuario
+GRANT CREATE SESSION, CREATE TABLE TO willy;
+//Creacion de uyn rol
+CREATE ROLE rol_gestion;
+GRANT SELECT,UPDATE ON Departamentos TO rol_gestion;
+GRANT SELECT,UPDATE ON Empleados TO rol_gestion;

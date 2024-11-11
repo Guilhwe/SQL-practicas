@@ -1,0 +1,16 @@
+Create TABLE Departamentos(idDepartamento Number(5)PRIMARY KEY,
+                nombre VARCHAR(20) NOT NULL, ubicacion VARCHAR(100)
+                );
+
+CREATE TABLE Empleados( idEmpleado NUMBER(5) PRIMARY KEY, nombre VARCHAR(20) NOT NULL,
+            apellido VARCHAR (50) NOT NULL, fechaNacimiento DATE NOT NULL, idDepartamento NUMBER(5), FOREIGN KEY (idDepartamento) REFERENCES Departamentos (idDepartamento)
+            );
+            
+ALTER TABLE empleados
+ADD fecha_ingreso DATE;
+
+INSERT INTO Departamentos(idDepartamento, nombre, ubicacion)
+VALUES ('00001', 'Dirección', 'Planta20');
+
+INSERT INTO Departamentos(idDepartamento, nombre, ubicacion)
+VALUES ('00002', 'Gestión', 'Planta19');

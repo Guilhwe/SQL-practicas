@@ -23,3 +23,8 @@ Values ('00002', 'Raul', 'Lobato', TO_DATE('1990-07-17', 'YYYY-MM-DD'),'00002',T
 
 INSERT INTO Empleados
 Values ('00003', 'Carmen', 'Gonzalez', TO_DATE('1989-01-11', 'YYYY-MM-DD'),'00002',TO_DATE('2022-05-03', 'YYYY-MM-DD'));
+
+//Comprobar donde esta una  tabla
+SELECT owner, table_name
+FROM all_tables
+WHERE table_name = 'EMPLEADOS';

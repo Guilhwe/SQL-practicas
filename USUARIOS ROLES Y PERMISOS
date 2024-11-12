@@ -32,5 +32,11 @@ FROM dba_tab_privs
 WHERE grantee = 'ROL_GESTION'
 AND table_name = 'EMPLEADOS';
 
-////quitar permisos de un rol
+//quitar permisos de un rol
 REVOKE  UPDATE ON empleados FROM rol_gestion;
+
+//creacion de un perfil de pruebas
+CREATE PROFILE C##perfil_1 LIMIT
+SESSIONS_PER_USER 3
+CONNECT_TIME 20
+FAILED_LOGIN_ATTEMPTS 3;

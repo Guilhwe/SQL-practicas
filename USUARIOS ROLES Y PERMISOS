@@ -40,3 +40,7 @@ CREATE PROFILE C##perfil_1 LIMIT
 SESSIONS_PER_USER 3
 CONNECT_TIME 20
 FAILED_LOGIN_ATTEMPTS 3;
+
+//otorgado perfil y rol al usuario de pruebas willy
+ALTER USER willy PROFILE C##perfil_1;
+GRANT rol_gestion TO willy;
